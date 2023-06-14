@@ -1,0 +1,28 @@
+-- I create a jewelry database 
+
+CREATE TABLE jewelry (id INTEGER PRIMARY KEY, type_of_jewelry TEXT, material_type TEXT, color TEXT, price INTEGER);
+
+INSERT INTO jewelry VALUES (1, "necklace", "gold_14k", "rose_gold", 125.50);
+INSERT INTO jewelry VALUES (2, "earing", "Starling_silver", "gold", 37.95);
+INSERT INTO jewelry VALUES (3, "ring", "Starling_silver", "silver", 24.99);
+INSERT INTO jewelry VALUES (4, "bracelet", "gold_plated", "gold", 9.99);
+INSERT INTO jewelry VALUES (5, "ring", "gold_14k", "gold", 99.99);
+INSERT INTO jewelry VALUES (6, "ring", "gold_14k", "gold", 74.99);
+INSERT INTO jewelry VALUES (7, "earing", "Starling_silver", "silver", 34.99);
+INSERT INTO jewelry VALUES (8, "necklace", "gold_plated", "gold", 9.99);
+INSERT INTO jewelry VALUES (9, "necklace", "Starling_silver", "gold", 34.99);
+INSERT INTO jewelry VALUES (10, "bracelet", "sterling_silver", "gold", 44.99);
+INSERT INTO jewelry VALUES (11, "bracelet", "gold_14k", "gold", 119.99);
+INSERT INTO jewelry VALUES (12, "earing", "gold_14k", "gold", 124.99);
+
+--display data base ordered by price 
+
+SELECT *
+FROM jewelry
+ORDER BY price desc;
+
+--Count how many items I have for each type 
+
+SELECT COUNT(type_of_jewelry)
+FROM jewelry
+GROUP BY type_of_jewelry;
