@@ -1,0 +1,12 @@
+-- create a favorite books database
+
+CREATE TABLE favorite_books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+INSERT INTO favorite_books VALUES (1, "the wrong bride", 4.5);
+INSERT INTO favorite_books VALUES (2, "the temporary wife", 4);
+INSERT INTO favorite_books VALUES (3, "the unwanted wife", 5);
+
+
+--display the database ordered by rating
+SELECT * FROM favorite_books
+ORDER BY rating desc
+
